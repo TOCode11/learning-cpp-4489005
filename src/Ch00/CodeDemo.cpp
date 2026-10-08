@@ -8,10 +8,16 @@ int main(){
     float num_1, num_2, result;
 
     std::cout << "Enter number 1: " << std::flush;
-    std::cin >> num_1;
+    if (!(std::cin >> num_1)) {
+        std::cout << "Invalid input. Please enter an integer: ";
+        return 42;
+    }
+    //std::cin >> num_1;
     std::cout << "Enter number 2: " << std::flush;
     std::cin >> num_2;
     
+
+
     result = num_1 + num_2;
     
     std::cout << "The result of the addition is " << result << std::endl;
